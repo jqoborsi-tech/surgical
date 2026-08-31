@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Jeries Qoborsi, DDS, DABOI/ID — In-House Surgery for Your Practice</title>
+<meta name="description" content="Board-certified implant dentist offering scheduled in-office surgery days for general practices across Southern California: wisdom teeth, immediate implants, full-arch, and IV sedation.">
+<style>
+  /* CTAs are click-to-call. To switch to Calendly later: replace tel:+17143482481 with your booking URL. */
+  :root{
+    --ink:#0a1521;--navy:#0d1b2a;--navy2:#16293b;--brass:#b3925a;--champagne:#d8c29a;--bronze:#8a6d3f;
+    --bone:#f7f3ec;--bone2:#efe9dd;--paper:#fff;--ink-soft:#242b34;--muted:#6a727e;--rule:#e4dece;
+    --serif:"Didot","Playfair Display",Georgia,serif;--sans:"Avenir Next","Avenir","Helvetica Neue",Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink-soft);background:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:var(--serif);font-weight:400;}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze);font-weight:600;}
+  .btn{display:inline-block;background:var(--brass);color:var(--ink);font-weight:600;font-size:15px;padding:15px 30px;border-radius:3px;transition:background .15s,transform .15s;}
+  .btn:hover{background:var(--champagne);transform:translateY(-1px);}
+  .btn-ghost{display:inline-block;border:1px solid rgba(207,180,134,.6);color:var(--bone);font-weight:600;font-size:14px;padding:14px 28px;border-radius:3px;}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(10,21,33,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(216,194,154,.18);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  nav .brand .nm{color:#fff;font-family:var(--serif);font-size:17px;letter-spacing:.18em;text-indent:.18em;}
+  nav .brand .cr{color:var(--champagne);font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-top:2px;}
+  nav .links{display:flex;gap:26px;align-items:center;}
+  nav .links a{color:#cfd4da;font-size:13px;}
+  nav .links a:hover{color:#fff;}
+  nav .navcta{background:var(--brass);color:var(--ink);padding:9px 18px;border-radius:3px;font-weight:600;}
+  @media(max-width:820px){nav .links a:not(.navcta){display:none;}}
+
+  .hero{background:var(--ink);color:var(--bone);padding:90px 0 82px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-180px;top:-160px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(216,194,154,.14);}
+  .hero::before{content:"";position:absolute;right:-80px;top:-60px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(216,194,154,.1);}
+  .hero .goldline{width:46px;height:2px;background:var(--brass);margin:22px 0 20px;}
+  .hero h1{font-size:50px;color:#fdfcf9;max-width:20ch;}
+  .hero .creds{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-top:16px;}
+  .hero p.sub{font-size:19px;line-height:1.55;color:#d7dbe1;max-width:56ch;margin-top:22px;font-family:var(--serif);}
+  .hero .actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .hero .chips{margin-top:40px;display:flex;gap:10px;flex-wrap:wrap;}
+  .hero .chip{border:1px solid rgba(216,194,154,.5);color:#e8e2d4;border-radius:2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;}
+  @media(max-width:680px){.hero h1{font-size:35px;}.hero p.sub{font-size:17px;}}
+
+  section{padding:74px 0;}
+  .section-head{max-width:60ch;margin-bottom:38px;}
+  .section-head h2{font-size:34px;color:var(--ink);margin-top:10px;}
+  .section-head p{font-size:17px;color:var(--muted);margin-top:14px;}
+
+  .alt{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .stat{background:var(--bone);border:1px solid var(--rule);border-top:3px solid var(--brass);padding:26px 22px;}
+  .stat .n{font-family:var(--serif);font-size:38px;color:var(--ink);}
+  .stat .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5;}
+  @media(max-width:760px){.stats{grid-template-columns:1fr;}}
+
+  /* calculator callout */
+  .calc{background:linear-gradient(160deg,#0a1521,#16293b);color:var(--bone);border-radius:6px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative;overflow:hidden;}
+  .calc::after{content:"";position:absolute;right:-120px;bottom:-140px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(216,194,154,.14);}
+  .calc .z{position:relative;z-index:2;}
+  .calc .eyebrow{color:var(--champagne);}
+  .calc h3{font-size:28px;color:#fff;margin:10px 0 8px;max-width:20ch;}
+  .calc p{font-size:15px;color:#c9cfd6;max-width:46ch;}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .svc{background:var(--paper);border:1px solid var(--rule);padding:26px;}
+  .svc .num{font-family:var(--serif);font-size:15px;color:var(--brass);}
+  .svc h3{font-size:21px;color:var(--ink);margin:6px 0 8px;}
+  .svc p{font-size:14.5px;color:var(--ink-soft);line-height:1.55;}
+  .svc .note{font-size:13px;color:var(--muted);margin-top:8px;}
+  @media(max-width:760px){.svc-grid{grid-template-columns:1fr;}}
+
+  .creds-band{background:var(--ink);color:var(--bone);}
+  .creds-band h2{color:#fdfcf9;}
+  .creds-band .section-head p{color:#cfd4da;}
+  .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .cred{border:1px solid rgba(216,194,154,.28);padding:20px 18px;}
+  .cred .yr{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--champagne);font-weight:600;}
+  .cred h4{font-family:var(--sans);font-size:15px;font-weight:600;color:#fdfcf9;margin:6px 0 5px;}
+  .cred p{font-size:12.5px;color:#aeb6c0;line-height:1.5;}
+  @media(max-width:860px){.cred-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:480px){.cred-grid{grid-template-columns:1fr;}}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .step .num{font-family:var(--serif);font-size:40px;color:var(--brass);line-height:1;}
+  .step h3{font-size:20px;color:var(--ink);margin:10px 0 8px;}
+  .step p{font-size:14.5px;color:var(--ink-soft);}
+  @media(max-width:760px){.steps{grid-template-columns:1fr;}}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);}
+  .split .half{padding:30px;background:var(--paper);}
+  .split .half+.half{border-left:1px solid var(--rule);}
+  .split h3{font-size:19px;color:var(--ink);margin-bottom:14px;}
+  .split ul{list-style:none;}
+  .split li{font-size:14.5px;line-height:1.5;padding:7px 0 7px 18px;position:relative;}
+  .split li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:2px;background:var(--brass);}
+  @media(max-width:680px){.split{grid-template-columns:1fr;}.split .half+.half{border-left:none;border-top:1px solid var(--rule);}}
+
+  .final{background:linear-gradient(160deg,#0a1521,#16293b);color:var(--bone);text-align:center;}
+  .final h2{font-size:38px;color:#fdfcf9;max-width:20ch;margin:0 auto;}
+  .final p{font-size:17px;color:#cfd4da;margin:18px auto 30px;max-width:56ch;}
+  .final .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .final .or{display:block;margin-top:20px;font-size:14px;color:#aeb6c0;}
+  .final .or b{color:var(--champagne);}
+
+  footer{background:var(--ink);color:#8d96a2;border-top:1px solid rgba(216,194,154,.2);padding:30px 0;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;letter-spacing:.04em;}
+  footer .gold{color:var(--champagne);}
+  .disclaimer{font-size:11px;color:#6b7480;max-width:1080px;margin:16px auto 0;padding:0 28px;line-height:1.5;}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><div class="nm">JERIES QOBORSI</div><div class="cr">DDS · Diplomate, ABOI/ID</div></div>
+  <div class="links">
+    <a href="#opportunity">Opportunity</a>
+    <a href="calculator.html">Revenue Calculator</a>
+    <a href="#services">Services</a>
+    <a href="host.html">Host a Surgery Day</a>
+    <a class="navcta" href="tel:+17143482481">Call or Text</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow" style="color:var(--champagne)">Board-Certified Implant Dentistry · Southern California</div>
+  <div class="goldline"></div>
+  <h1 class="serif">A surgical department for your practice, one day a month.</h1>
+  <div class="creds">Wisdom Teeth · Immediate Implants · Full-Arch · IV Sedation</div>
+  <p class="sub">I'm a board-certified implant dentist who brings the surgery your practice refers out back
+    in-house. You keep the patient, the restorative, and the production. I bring everything else.</p>
+  <div class="actions">
+    <a class="btn" href="tel:+17143482481">Call or text — (714) 348-2481</a>
+    <a class="btn-ghost" href="calculator.html">See what you're referring away →</a>
+  </div>
+  <div class="chips">
+    <span class="chip">Diplomate · ABOI/ID</span><span class="chip">Fellow · AAID</span>
+    <span class="chip">CA IV Sedation Permit</span><span class="chip">Zero Added Overhead</span>
+  </div>
+</div></header>
+
+<section id="opportunity" class="alt"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">The Opportunity</div>
+    <h2 class="serif">The production your practice refers away every month</h2>
+    <p>Every wisdom-teeth referral, every implant consult sent across town, every denture patient who could
+      have had a fixed arch — that revenue leaves, and so does the patient. They never wanted to go:
+      every owner knows the question that follows a referral — "Doctor, are you sure you can't do it here?"</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n">$2,400+</div><div class="l">Typical production for one impacted third-molar case with IV sedation</div></div>
+    <div class="stat"><div class="n">$5,000+</div><div class="l">Surgical and restorative production per implant site kept in-house</div></div>
+    <div class="stat"><div class="n">$25,000+</div><div class="l">Full-arch patient value that walks out with every referral</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="calc">
+    <div class="z">
+      <div class="eyebrow">Interactive Tool</div>
+      <h3 class="serif">See your own number in 60 seconds.</h3>
+      <p>Drag a few sliders to match a typical month at your practice, and watch the annual production you're
+        referring away add up — alongside what an in-house surgery day keeps.</p>
+    </div>
+    <a class="btn z" href="calculator.html">Open the revenue calculator</a>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Surgical Services</div>
+    <h2 class="serif">A complete surgical service line, inside your office</h2>
+    <p>Every case is screened in advance from your CBCT and intraoral scans. I operate; your doctors keep the
+      restorative. Your patients never leave your chair or your brand.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc"><div class="num">01</div><h3 class="serif">Wisdom Teeth &amp; Surgical Extractions</h3>
+      <p>Full and partial bony impactions removed with a minimally invasive, PRF-supported protocol. IV or oral sedation for every anxious patient.</p>
+      <p class="note">The highest-volume referral leak in general practice, and the easiest to keep in-house.</p></div>
+    <div class="svc"><div class="num">02</div><h3 class="serif">Implant &amp; Immediate-Implant Surgery</h3>
+      <p>Immediate placement at extraction, finished with socket-sealing abutments that preserve the gingival architecture for the best final result. Fully guided workflows available whenever the case benefits.</p>
+      <p class="note">Your doctors keep every implant crown, or I restore — whichever you prefer.</p></div>
+    <div class="svc"><div class="num">03</div><h3 class="serif">Full-Arch &amp; All-on-X Reconstruction</h3>
+      <p>Complete surgical phase for fixed full-arch cases — extractions, alveoloplasty, implant placement, and conversion support — planned digitally from the patient's CBCT.</p>
+      <p class="note">Turn your denture patients into the most valuable cases in your practice.</p></div>
+    <div class="svc"><div class="num">04</div><h3 class="serif">Grafting, Sinus &amp; IV Sedation</h3>
+      <p>Lateral-window and crestal sinus augmentation with piezosurgery, GBR, ridge preservation, and PRF, plus state-permitted IV moderate sedation brought to your office.</p>
+      <p class="note">Sedation closes the fearful patients who've postponed treatment for years.</p></div>
+  </div>
+</div></section>
+
+<section id="credentials" class="creds-band"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--champagne)">Credentials</div>
+    <h2 class="serif">Credentials your patients and your marketing can lean on</h2>
+    <p>When your office introduces me, it introduces a board-certified implant dentist. That belongs in your patient conversations and your case acceptance.</p>
+  </div>
+  <div class="cred-grid">
+    <div class="cred"><div class="yr">2024</div><h4>Diplomate, ABOI/ID</h4><p>The highest credential in implant dentistry — held by only a few hundred dentists worldwide.</p></div>
+    <div class="cred"><div class="yr">2025</div><h4>Fellow, AAID</h4><p>American Academy of Implant Dentistry, by examination and case presentation.</p></div>
+    <div class="cred"><div class="yr">2023</div><h4>Fellow, AAIP</h4><p>American Academy of Implant Prosthodontics — surgery guided by the final restoration.</p></div>
+    <div class="cred"><div class="yr">2022</div><h4>IV Sedation Permit</h4><p>Dental Board of California, with full emergency-readiness training.</p></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="serif">Turnkey. Zero overhead. Your brand, start to finish.</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="num serif">1</div><h3 class="serif">Before</h3><p>I review every case from your CBCT and scans in advance. Your coordinator gets fee guidance, checklists, and scripts so the day is built and pre-collected before I arrive.</p></div>
+    <div class="step"><div class="num serif">2</div><h3 class="serif">Day Of</h3><p>I arrive with surgical kits, implants, sedation and monitoring equipment, and PRF centrifuge. One of your assistants joins me; everything is documented in your software.</p></div>
+    <div class="step"><div class="num serif">3</div><h3 class="serif">After</h3><p>Every surgical patient gets my direct line for post-op questions, so your front desk never holds a complication call. Restorative hand-off notes go to your doctors.</p></div>
+  </div>
+  <div style="margin-top:34px"><a class="btn" href="host.html">See what hosting a surgery day involves →</a></div>
+  <div style="margin-top:48px" class="split">
+    <div class="half"><h3 class="serif">This program fits practices that…</h3><ul>
+      <li>Refer out three or more surgical cases a month</li>
+      <li>Own a CBCT that isn't producing surgical revenue</li>
+      <li>Want to market implants and full-arch credibly</li>
+      <li>Have anxious patients who need sedation to say yes</li></ul></div>
+    <div class="half"><h3 class="serif">What you provide vs. what I bring</h3><ul>
+      <li><b>You:</b> an operatory, one assistant, CBCT imaging, and scheduling</li>
+      <li><b>Me:</b> instrumentation, implants &amp; biomaterials, sedation equipment, PRF, and my own malpractice coverage</li></ul></div>
+  </div>
+</div></section>
+
+<section id="contact" class="final"><div class="wrap">
+  <h2 class="serif">Let's see what one surgery day would produce for your practice.</h2>
+  <p>A 15-minute fit call: we look at what you refer out today, and you'll know on the call whether the program fits — and what a surgery day at your office would produce.</p>
+  <div class="actions">
+    <a class="btn" href="tel:+17143482481">Call or text — (714) 348-2481</a>
+    <a class="btn-ghost" href="mailto:jqoborsi@gmail.com">Email Dr. Qoborsi</a>
+  </div>
+  <span class="or">Or call directly — <b><a href="tel:+17143482481">(714) 348-2481</a></b></span>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Dr. Jeries N. Qoborsi · DDS, DABOI/ID</span>
+  <span class="gold">(714) 348-2481 · jqoborsi@gmail.com</span>
+</div>
+<div class="disclaimer">Dr. Jeries Qoborsi is a general dentist providing surgical and implant dentistry under
+  California licensure and IV moderate sedation permit. Diplomate, American Board of Oral Implantology/Implant
+  Dentistry. Services are provided in partnership with host general practices across Southern California.</div>
+</footer>
+
+</body>
+</html>
