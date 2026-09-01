@@ -14,7 +14,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{font-family:var(--sans);color:var(--ink-soft);background:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  body{font-family:var(--sans);color:var(--ink-soft);background:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   .serif{font-family:var(--serif);font-weight:400;}
   h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;}
   a{color:inherit;text-decoration:none;}
@@ -26,8 +26,13 @@
 
   nav{position:sticky;top:0;z-index:50;background:rgba(10,21,33,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(216,194,154,.18);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
-  nav .brand .nm{color:#fff;font-family:var(--serif);font-size:17px;letter-spacing:.18em;text-indent:.18em;}
-  nav .brand .cr{color:var(--champagne);font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-top:2px;}
+  nav .brand .nm{color:#fff;font-family:var(--serif);font-size:16px;letter-spacing:.05em;white-space:nowrap;}
+  nav .brand .cr{color:var(--champagne);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:3px;white-space:nowrap;}
+  @media(max-width:620px){
+    nav .brand .nm{font-size:13px;white-space:normal;line-height:1.25;}
+    nav .brand .cr{font-size:7.5px;letter-spacing:.08em;white-space:normal;}
+    nav .wrap{height:auto;padding-top:10px;padding-bottom:10px;gap:12px;}
+  }
   nav .links{display:flex;gap:26px;align-items:center;}
   nav .links a{color:#cfd4da;font-size:13px;}
   nav .links a:hover{color:#fff;}
@@ -84,7 +89,7 @@
 <body>
 
 <nav><div class="wrap">
-  <div class="brand"><div class="nm">JERIES QOBORSI</div><div class="cr">DDS · Diplomate, ABOI/ID</div></div>
+  <div class="brand"><div class="nm">Dr. Jeries Qoborsi, DDS, DABOI/ID</div><div class="cr">Fellow &ndash; AAID, Diplomate &ndash; ABOI/ID</div></div>
   <div class="links">
     <a href="index.html">Home</a>
     <a href="calculator.html">Revenue Calculator</a>
@@ -185,7 +190,7 @@
 </div></section>
 
 <footer><div class="wrap">
-  <span>Dr. Jeries N. Qoborsi · DDS, DABOI/ID</span>
+  <span>Dr. Jeries N. Qoborsi</span>
   <span class="gold">(714) 348-2481 · jqoborsi@gmail.com</span>
 </div>
 <div class="disclaimer">Dr. Jeries Qoborsi is a general dentist providing surgical and implant dentistry under
