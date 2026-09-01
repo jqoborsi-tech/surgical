@@ -14,7 +14,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{font-family:var(--sans);color:var(--ink-soft);background:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  body{font-family:var(--sans);color:var(--ink-soft);background:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   .serif{font-family:var(--serif);font-weight:400;}
   h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;}
   a{color:inherit;text-decoration:none;}
@@ -26,8 +26,13 @@
 
   nav{position:sticky;top:0;z-index:50;background:rgba(10,21,33,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(216,194,154,.18);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
-  nav .brand .nm{color:#fff;font-family:var(--serif);font-size:17px;letter-spacing:.18em;text-indent:.18em;}
-  nav .brand .cr{color:var(--champagne);font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-top:2px;}
+  nav .brand .nm{color:#fff;font-family:var(--serif);font-size:16px;letter-spacing:.05em;white-space:nowrap;}
+  nav .brand .cr{color:var(--champagne);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:3px;white-space:nowrap;}
+  @media(max-width:620px){
+    nav .brand .nm{font-size:13px;white-space:normal;line-height:1.25;}
+    nav .brand .cr{font-size:7.5px;letter-spacing:.08em;white-space:normal;}
+    nav .wrap{height:auto;padding-top:10px;padding-bottom:10px;gap:12px;}
+  }
   nav .links{display:flex;gap:26px;align-items:center;}
   nav .links a{color:#cfd4da;font-size:13px;}
   nav .links a:hover{color:#fff;}
@@ -44,7 +49,25 @@
   .hero .actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
   .hero .chips{margin-top:40px;display:flex;gap:10px;flex-wrap:wrap;}
   .hero .chip{border:1px solid rgba(216,194,154,.5);color:#e8e2d4;border-radius:2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;}
+  /* hero: copy left, portrait right */
+  .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:52px;align-items:center;position:relative;z-index:2;}
+  .hero-photo{position:relative;}
+  .hero-photo img{width:100%;max-width:340px;display:block;border-radius:5px;
+    border:1px solid rgba(216,194,154,.4);box-shadow:0 28px 64px -26px rgba(0,0,0,.75);}
+  .hero-photo figcaption{margin-top:14px;max-width:340px;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--champagne);line-height:1.7;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-photo img{max-width:250px;}.hero-photo figcaption{max-width:250px;}}
   @media(max-width:680px){.hero h1{font-size:35px;}.hero p.sub{font-size:17px;}}
+  @media(max-width:520px){
+    .wrap{padding:0 20px;}
+    .hero h1{font-size:29px;max-width:100%;}
+    .eyebrow{font-size:10.5px;letter-spacing:.16em;}
+    .hero .creds{font-size:11.5px;letter-spacing:.12em;}
+    .hero p.sub{font-size:16px;}
+    .section-head h2,.final h2,.calc h3{font-size:26px;max-width:100%;}
+    .btn,.btn-ghost{font-size:14px;padding:13px 20px;}
+  }
 
   section{padding:74px 0;}
   .section-head{max-width:60ch;margin-bottom:38px;}
@@ -116,7 +139,7 @@
 <body>
 
 <nav><div class="wrap">
-  <div class="brand"><div class="nm">JERIES QOBORSI</div><div class="cr">DDS · Diplomate, ABOI/ID</div></div>
+  <div class="brand"><div class="nm">Dr. Jeries Qoborsi, DDS, DABOI/ID</div><div class="cr">Fellow &ndash; AAID, Diplomate &ndash; ABOI/ID</div></div>
   <div class="links">
     <a href="#opportunity">Opportunity</a>
     <a href="calculator.html">Revenue Calculator</a>
@@ -126,7 +149,8 @@
   </div>
 </div></nav>
 
-<header class="hero"><div class="wrap">
+<header class="hero"><div class="wrap hero-grid">
+ <div class="hero-copy">
   <div class="eyebrow" style="color:var(--champagne)">Board-Certified Implant Dentistry · Southern California</div>
   <div class="goldline"></div>
   <h1 class="serif">A surgical department for your practice, one day a month.</h1>
@@ -141,6 +165,12 @@
     <span class="chip">Diplomate · ABOI/ID</span><span class="chip">Fellow · AAID</span>
     <span class="chip">CA IV Sedation Permit</span><span class="chip">Zero Added Overhead</span>
   </div>
+ </div>
+ <figure class="hero-photo">
+   <img src="assets/headshot.jpg" alt="Dr. Jeries Qoborsi, DDS, DABOI/ID"
+        onerror="this.closest('.hero-photo').style.display='none'">
+   <figcaption>Dr. Jeries Qoborsi, DDS<br>Diplomate, ABOI/ID</figcaption>
+ </figure>
 </div></header>
 
 <section id="opportunity" class="alt"><div class="wrap">
